@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNIVERSITY</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,400;1,500&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/47cd82617a.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="package.html"><img src="logo.png" alt="Logo"></a>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="package.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">BLOG</a></li>
+                    <li><a href="blog.html">COURSE</a></li>
+                    <li><a href="contact us.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>Our Certification & Online Programmes for 2022</h1>
+    </section>
+
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="certificate.jpg" alt="Certificate">
+                <h2>Our Certification & Online Programmes for 2022</h2>
+                <p>We provide the best live online classes in the world that aim to deliver the most effective curriculum with the right blend of technology, pedagogy, and content.</p>
+                <p>Using technology to democratize education, we reach out to learners regardless of their geographical location and socioeconomic background.</p>
+                <p>We are one of the leading 100% certified online universities and always keep in mind the needs of various kinds of learners, ensuring that every student learns effectively.</p>
+
+                <div class="comment-box">
+                    <h3>ENROLL</h3>
+                    <form class="comment-form">
+                        <input type="text" placeholder="Enter Name" required>
+                        <input type="email" placeholder="Enter Email" required>
+                        <input type="text" placeholder="Enroll for your desired course" required>
+                        <textarea rows="5" placeholder="Your comment" required></textarea>
+                        
+                        <!-- Payment Section -->
+                        <div class="payment-box">
+                            <h3>Make a Payment</h3>
+                            <input type="text" id="amount" placeholder="Enter amount" required>
+                        </div>
+
+                        <button type="submit" class="hero-btn red-btn" onclick="processPayment(event)">SUBMIT</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="blog-right">
+                <h3>PROGRAMMES</h3>
+                <div><span>Software Systems</span><span>10</span></div>
+                <div><span>Software Engineering</span><span>15</span></div>
+                <div><span>Computer Science</span><span>20</span></div>
+                <div><span>Computer Architecture</span><span>30</span></div>
+                <div><span>Data Science</span><span>35</span></div>
+                <div><span>Cyber Security</span><span>40</span></div>
+                <div><span>Machine Learning</span><span>45</span></div>
+                <div><span>Cloud Computing</span><span>50</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <h4>About Us</h4>
+        <p>We at Eduford aim to give people the best education and improve their skills for their well-being.</p>
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made with <i class="fa fa-heart"></i> by Eduford</p>
+    </section>
+
+    <script>
+        function processPayment(event) {
+            event.preventDefault(); // Prevent form submission
+            const amount = document.getElementById('amount').value; // Get the amount entered
+            if (amount && !isNaN(amount) && Number(amount) > 0) {
+                alert("Payment of $" + amount + " has been successfully made.");
+            } else {
+                alert("Please enter a valid amount.");
+            }
+        }
+    </script>
+</body>
+</html>
